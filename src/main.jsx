@@ -30,7 +30,10 @@ ReactDOM.render(
               </main>
             }
           />
-          <Route path=":invoiceId" element={<Invoice />} />
+          <Route
+            path=":invoiceId"
+            element={<Invoice test={{ name: 'test_name' }} />}
+          />
         </Route>
         <Route
           path="*"

@@ -1,7 +1,7 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { getInvoice, deleteInvoice } from '../data';
 
-export default function Invoice() {
+export default function Invoice({ test }) {
   let navigate = useNavigate();
   let params = useParams();
   let invoice = getInvoice(parseInt(params.invoiceId, 10));
@@ -22,6 +22,8 @@ export default function Invoice() {
           Delete
         </button>
       </p>
+      {/* test send props to component */}
+      <p>test: {test.name}</p>
     </main>
   );
 }
